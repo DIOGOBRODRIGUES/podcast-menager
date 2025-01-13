@@ -2,13 +2,14 @@
   "name": "podcast-menager",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "start:dev": "tsx src/server.js",
+    "start:dev": "tsx --env-file=.env src/server.js",
     "start:watch": "tsx watch src/server.ts",
-    "dist": "tsup src", 
+    "dist": "tsup src",
     "start:dist": "npm run dist && node/server.js"
   },
   "keywords": [],
@@ -16,6 +17,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/node": "^22.10.5",
     "tsup": "^8.3.5",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3"
